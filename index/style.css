@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.intro,
+.fade-in {
+    opacity: 1;
+    transition: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+    height: 75px;
+    background-color: #d6e9d9;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;  /* Garantir que o header fique acima do conteúdo */
+}
+
+.logo img {
+    width: 220px;
+    padding-top: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+}
+
+.nav-links li{
+    padding: 20px;
+    text-align: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 22px;
+    display: block;
+}
+
+.intro-text {
+    position: absolute;
+    top: 18px;
+    right: 80px;
+    font-size: 18px;
+    color: #000;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.profile img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 25px;
+}
+
+.welcome-message {
+    margin-right: 20px;
+    font-size: 18px;
+    color: #000;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.profile {
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilos do carrossel */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    height: 400px; /* Ajustado para manter proporção */
+}
+
+/* Slide do carrossel */
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item:first-child {
+    display: block; /* Tornando o primeiro item visível */
+}
+
+/* Imagens dentro do carrossel */
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção das imagens sem distorção */
+}
+
+/* Legenda do carrossel */
+.carousel-caption {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.carousel-caption .highlight {
+    color: #e74c3c; /* Cor vermelha para destaque */
+}
+
+.carousel-caption .highlight-alface{
+    color: #65eede;
+}
+
+/* Botões de navegação do carrossel (prev e next) */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 6px 15px 9px 15px;  
+    color: #000;
+    background-color: #fff;
+    opacity: 0.6;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 24px;
+    transition: 0.6s ease;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Fundo suavizado */
+}
+
+/* Seção de introdução */
+.intro {
+    text-align: center;
+    padding: 80px 0;
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.intro h2 {
+    font-size: 36px;
+    color: #00796b;
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+.intro p, .intro a {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.saiba-mais{
+    text-decoration: none;
+}
+
+.saiba-mais:hover{
+    text-decoration: underline;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.intro a {
+    display: inline-block; /* Para aplicar a margem corretamente */
+    padding: 10px 20px; /* Botão maior */
+    background-color: #c1dbc4;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 5px; /* Adicionando espaço acima do botão */
+}
+
+.intro a:hover{
+    background-color: #001064;
+    color: white;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+/* Seção de serviços */
+.social-text {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px;
+}
+
+.social-text a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #f5f5f5;
+}
+
+.social-text a:hover {
+    background-color: #48c97e;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    background-color: #f0f8f0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.service-card {
+    width: 28%;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.service-card:hover{
+    text-decoration: underline;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-card p {
+    font-size: 22px;
+    color: #34495e;
+    font-weight: bold;
+}
+
+.info {
+    text-align: center;
+    padding: 50px;
+    margin-bottom: 50px;
+    font-family: 'Merriweather', serif;
+}
+
+.info p {
+    font-size: 22px; /* Texto maior */
+    color: #2c3e50;
+}
+
+.info strong {
+    color: #e74c3c;
+    font-size: 24px; /* Destaque maior */
+}
+
+/* Estilos do rodapé */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;  /* Garantir que o footer fique acima do conteúdo */
+    background-color: #9fbd98;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* Texto maior */
+}
+
+.social-links a:hover{
+    text-decoration: underline;
+}
+
+.daltonismo {
+    position: fixed;
+    left: 20px;
+    bottom: 70px;
+    width: 70px;
+    height: 60px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden; /* Garante que nada ultrapasse a borda do botão */
+}
+
+.daltonismo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: opacity 0.3s ease;
+}
+
+.olho-fechado {
+    opacity: 1; /* Inicialmente escondemos a imagem do olho fechado */
+}
+
+.daltonismo:hover .olho-aberto {
+    opacity: 1; /* Oculta a imagem do olho aberto ao passar o mouse */
+}
+
+.daltonismo:hover .olho-fechado {
+    opacity: 0; /* Exibe a imagem do olho fechado ao passar o mouse */
+}   
+
+.daltonismo p {
+    display: none; /* Ocultar o texto, pois estamos usando imagens */
+}
+
+.instagram {
+    position: fixed;
+    right: 20px;
+    bottom: 70px;
+    width: 50px;
+    height: 50px;
+}
+
+.button-instagram img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Modo Daltonismo: ativado pela classe "daltonismo-ativo" no <body> */
+.daltonismo-ativo nav,
+.daltonismo-ativo header,
+.daltonismo-ativo footer {
+    background-color: #2e3b4e; /* Fundo mais escuro */
+    color: #ffffff; /* Texto em branco para contraste */
+}
+
+/* Links de navegação */
+.daltonismo-ativo .nav-links li a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.daltonismo-ativo .nav-links li a:hover {
+    color: #ffcc33; /* Amarelo para destaque */
+}
+
+/* Textos principais */
+.daltonismo-ativo .carousel-caption,
+.daltonismo-ativo .info p,
+.daltonismo-ativo footer {
+    color: #ffffff;
+}
+
+/* Destaques de texto */
+.daltonismo-ativo .carousel-caption .highlight {
+    color: #ffcc33; /* Amarelo vibrante para destaque */
+}
+
+.daltonismo-ativo .carousel-caption .highlight-alface {
+    color: #88d8ff; /* Azul claro contrastante */
+}
+
+/* Cartões de serviço */
+.daltonismo-ativo .service-card {
+    background-color: #394b5a; /* Fundo escuro para contraste */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+}
+
+.daltonismo-ativo .service-card:hover {
+    background-color: #2e3b4e;
+}
+
+/* Botões de ação */
+.daltonismo-ativo .intro a,
+.daltonismo-ativo .social-text a {
+    background-color: #555555; /* Fundo cinza escuro */
+    color: #ffffff;
+    border: 2px solid #ffcc33; /* Borda amarela para destaque */
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.daltonismo-ativo .intro a:hover,
+.daltonismo-ativo .social-text a:hover {
+    background-color: #ffcc33;
+    color: #2e3b4e;
+}
+
+/* Botões de navegação do carrossel */
+.daltonismo-ativo .prev, .daltonismo-ativo .next {
+    background-color: #555555;
+    color: #ffcc33;
+    border: none;
+}
+
+.daltonismo-ativo .prev:hover,
+.daltonismo-ativo .next:hover {
+    background-color: #444444;
+}
+
+/* Destaque de textos informativos */
+.daltonismo-ativo .info strong {
+    color: #ffcc33;
+    font-weight: bold;
+}
+
+/* Botão de Acessibilidade (Daltonismo) */
+.daltonismo-ativo .daltonismo {
+    background-color: #ffcc33;
+    color: #2e3b4e;
+}
+
+.daltonismo-ativo .daltonismo:hover {
+    background-color: #e6b800; /* Amarelo escuro no hover */
+}
+
+/* Links do rodapé */
+.daltonismo-ativo .social-links a {
+    color: #ffcc33;
+}
+
+.daltonismo-ativo .social-links a:hover {
+    color: #ffdd44;
+    text-decoration: underline;
+}

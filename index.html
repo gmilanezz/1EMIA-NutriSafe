@@ -1,0 +1,101 @@
+        <!DOCTYPE html>
+        <html lang="pt-br">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>NutriSafe</title>
+            <link rel="stylesheet" href="index/style.css">
+            <script src="index/script.js"></script>
+        </head>
+        <body>
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/nutrisafe.jpg" alt="Logo da NutriSafe">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="contagem-cal/contagem-cal.html">Contagem Calórica</a></li>
+                    <li><a href="perguntas-respostas/p&r.html">Perguntas & Respostas</a></li>
+                    <li><a href="artigos/artigos.html">Artigos</a></li>
+                    <li><a href="sobre-nos/sobre-nos.html">Sobre Nós</a></li>
+                </ul>
+                <a class="profile" href="login/login.html">
+                    <img src="assets/perfil-usuario.jpg" alt="Imagem de Perfil">
+                </a>
+                <div id="intro-text" class="intro-text">Conheça a NutriSafe! ➔</div>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <link rel="preload" href="assets/tomate.jpg" as="image">
+            <a href="artigo-tomate/tomate.html">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <div class="carousel-item active">
+                        <img src="assets/tomate.jpg" alt="Imagem de tomates">
+                        <div class="carousel-caption">
+                        <h1>Benefícios do<span class="highlight"> tomate</span></h1>
+                    </div>
+                </div>
+            </a>
+                <a href="artigo-alface/alface.html">
+                    <div class="carousel-item">
+                        <img src="assets/salada.jpg" alt="Imagem de alface">
+                        <div class="carousel-caption">
+                            <h1>Comer alface faz bem para a <span class="highlight-alface">mente</span></h1>
+                        </div>
+                    </div>
+                </a>
+                    <a href="artigo-banana/banana.html">
+                    <div class="carousel-item">
+                        <img src="assets/banana.jpg" alt="Imagem de bananas">
+                        <div class="carousel-caption">
+                            <h1>Bananas para <strong class="highlight-alface">energia</strong> e saúde intestinal</h1>
+                        </div>
+                    </div>
+                </a>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </section>
+
+        <section class="intro">
+            <h2>Seja leve, seja NutriSafe</h2>
+            <p class="fade-in">O nosso tema é <strong>segurança alimentar</strong> e nossa missão é proporcionar uma qualidade de vida mais leve.</p>
+            <a class="saiba-mais fade-in" href="sobre-nos/sobre-nos.html">Saiba mais!</a>
+        </section>
+
+        <section class="services">
+            <a href="contagem-cal/contagem-cal.html" class="service-card">
+                <p>Contagem calórica</p>
+            </a>
+            <a href="perguntas-respostas/p&r.html" class="service-card">
+                <p>Perguntas & respostas</p>
+            </a>
+        </section>
+
+        <section class="info">
+            <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">  
+            <p>Tudo baseado na <strong>dermatologia</strong> e <strong>neurociência</strong>!</p>
+        </section>
+
+        <footer>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Contato</a>
+                <div class="daltonismo" onclick="toggleDaltonismoMode()">
+                    <img src="assets/olho-aberto.jpg" alt="Olho Aberto" class="daltonismo-img">
+                    <img src="assets/olho-fechado.jpg" class="olho-fechado" alt="Olho Fechado">
+                </div>
+                <div class="instagram">
+                    <a href="https://www.instagram.com/nutrisafe._?igsh=MTF0Nmd0OWZpcGRyNg%3D%3D&utm_source=qr" class="button-instagram">
+                        <img src="assets/instagram.jpg" alt="Instagram">
+                    </a>
+                </div>  
+            </div>
+        </footer>    
+        </body>
+        </html>

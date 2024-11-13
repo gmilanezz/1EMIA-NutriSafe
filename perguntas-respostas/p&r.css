@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+    height: 75px;
+    background-color: #d6e9d9;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;  /* Garantir que o header fique acima do conteúdo */
+}
+
+.logo img {
+    width: 220px;
+    padding-top: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+}
+
+.nav-links li{
+    padding: 20px;
+    text-align: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 22px;
+    display: block;
+}
+
+.intro-text {
+    position: absolute;
+    top: 18px;
+    right: 80px;
+    font-size: 18px;
+    color: #000;
+    padding: 5px 10px;
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.profile img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 25px;
+}
+
+.welcome-message {
+    margin-right: 20px;
+    font-size: 18px;
+    color: #000;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.profile {
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    display: inline-block;
+}
+
+.content {
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.faq {
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    transition: background 0.3s;
+}
+
+.faq-item:hover {
+    background: #e8f5e9; /* Efeito de hover */
+}
+
+.chatbot {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.chatbox {
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    background-color: #f9f9f9; /* Cor de fundo da caixa de chat */
+}
+
+#userInput {
+    width: calc(100% - 80px);
+    padding: 10px;
+    border: 1px solid #4CAF50; /* Cor da borda */
+    border-radius: 5px;
+}
+
+#sendButton {
+    padding: 10px 15px;
+    background-color: #4CAF50; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#sendButton:hover {
+    background-color: #45a049; /* Efeito de hover do botão */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* Texto maior */
+}
+
+.social-links a:hover{
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #9fbd98;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;  /* Garantir que o footer fique acima do conteúdo */
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+.button-instagram {
+    width: 8%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.button-instagram img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

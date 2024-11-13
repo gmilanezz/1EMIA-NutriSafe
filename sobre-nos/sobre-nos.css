@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+    height: 75px;
+    background-color: #d6e9d9;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;  /* Garantir que o header fique acima do conteúdo */
+}
+
+.logo img {
+    width: 220px;
+    padding-top: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+}
+
+.nav-links li{
+    padding: 20px;
+    text-align: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 22px;
+    display: block;
+}
+
+.intro-text {
+    position: absolute;
+    top: 18px;
+    right: 80px;
+    font-size: 18px;
+    color: #000;
+    padding: 5px 10px;
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.profile img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 25px;
+}
+
+.welcome-message {
+    margin-right: 20px;
+    font-size: 18px;
+    color: #000;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.profile {
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    display: inline-block;
+}
+
+/* Seção da equipe */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 70px;
+}
+
+main h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding-top: 5px;
+}
+
+.team-member {
+    background-color: #c1dbc4;
+    color: #2c3e50;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    width: calc(25% - 40px);
+    max-width: 260px;
+    min-width: 200px;
+    padding: 15px; /* Reduzido o padding para diminuir a altura do card */
+    text-align: center;
+    transition: all 0.7s;
+    margin: 0 20px;
+}
+
+.team-member h3 {
+    margin-bottom: 10px; /* Espaço abaixo do h3 */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.team-member p {
+    margin-top: 0; /* Remove o espaço extra acima do p */
+    margin-bottom: 15px; /* Espaço entre os parágrafos */
+}
+
+.team-member:hover {
+    transform: translateY(-15px);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+    background-color: #101258;
+}
+
+.team-member:hover h3 {
+    color: white;
+}
+
+.team-member:hover p {
+    color: white;
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.processo {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 52px;
+}
+
+.processo h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+.processo p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .processo p {
+        font-size: 1rem; /* Reduz o tamanho da fonte em telas menores */
+    }
+}
+
+@media (max-width: 1024px) {
+    .team-member {
+        width: calc(33.33% - 40px); /* Ajusta para 3 cards por linha em telas médias */
+    }
+}
+
+@media (max-width: 768px) {
+    .team-member {
+        width: calc(50% - 40px); /* Ajusta para 2 cards por linha em telas pequenas */
+    }
+}
+
+@media (max-width: 480px) {
+    .team-member {
+        width: 100%; /* Um card por linha em telas muito pequenas */
+        margin: 0; /* Remove a margem lateral em telas muito pequenas */
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;  /* Garantir que o footer fique acima do conteúdo */
+    background-color: #9fbd98;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px; /* Texto maior */
+}
+
+.social-links a:hover{
+    text-decoration: underline;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
